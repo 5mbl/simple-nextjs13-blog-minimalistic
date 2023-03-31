@@ -10,7 +10,7 @@ export const metadata = {
 
 const header = (
   <header>
-    <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
+    <div className=" w-full text-center bg-slate-800 p-8">
       <Image
         src="/logo.png"
         width={40}
@@ -19,7 +19,7 @@ const header = (
         alt={"logo"}
       />
       <Link href="/">
-        <h1 className="text-2xl text-white font-bold mt-4">Bittensor Blog</h1>
+        <h1 className="text-2xl text-white font-bold mt-4">Bittensor.org</h1>
       </Link>
       <p className="text-slate-300"> Incentivizing Intelligence. </p>
     </div>
@@ -37,11 +37,12 @@ const footer = (
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
-      <body className="mx-auto max-w-2xl px-6">
+      <body className="w-full">
           {header}
-          {children}
-          {footer}
+          <div className="max-w-6xl px-6 mx-auto">
+            {children}
+            {footer}
+          </div>
       </body>
     </html>
   )
